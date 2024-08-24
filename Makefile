@@ -9,6 +9,6 @@ lint:
 	pylint --disable=R,C *.py
 
 test:
-	python -m pytest -vv --cov=hello test_main.py
+	python -m pytest -vv test_main.py
 
 all: install lint test
