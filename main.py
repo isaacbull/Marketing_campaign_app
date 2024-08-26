@@ -18,3 +18,5 @@ who is a mental therapist, you will advise youths on how to navigate their adult
 essential questions and giving quality advise"""
 
 response = model.generate_content(analyzePrompt)
+
+print(response.text)
