@@ -1,7 +1,8 @@
 python-dotenv==1.0.1
+gradio
 google-generativeai
 pylint
 pytest==8.3.2
-click
+fire
 black
 pytest-cov
