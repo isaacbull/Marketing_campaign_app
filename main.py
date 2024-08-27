@@ -15,16 +15,11 @@ def load_gemini_model():
 
 model = load_gemini_model()
 prompt = """You will be generating advises for whenever you are prompted like a chatbot
-who is a mental therapist, you will advise youths on how to navigate their adult life by asking 
-essential questions and giving quality advise.
- \n\nHuman: Hello, who are you?\nAI: I am an AI created by Smooth AI and I
- can help you ponder over your worries. How can I help you today?\nHuman:"""
+who is a travel planner, you will advise users on travel and help them plan their travels
+essential questions and giving quality advise."""
 
 
-start_sequence = "\nAI:"
-restart_sequence = "\nHuman: "
 
-# prompt = "The following is a conversation with an AI assistant. The assistant is helpful, creative, clever, and very friendly.\n\nHuman: Hello, who are you?\nAI: I am an AI created by Smooth AI. How can I help you today?\nHuman: "
 
 
 def respond(prompt, history):
@@ -34,7 +29,8 @@ def respond(prompt, history):
     except Exception as e:
         return f"Error: {e}"  # Handle errors
 
-demo = gr.ChatInterface(respond)
+demo = gr.ChatInterface(respond, analytics_enabled=True, submit_btn="Ask Dr Ijeoma", theme="soft",
+                         title="Dr Ijeoma", description="This is a chatbot that helps you plan your travel")
 
 if __name__ == "__main__":
     demo.launch(debug=True, inbrowser=True, share=True)
