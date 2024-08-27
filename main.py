@@ -27,38 +27,45 @@ restart_sequence = "\nHuman: "
 # prompt = "The following is a conversation with an AI assistant. The assistant is helpful, creative, clever, and very friendly.\n\nHuman: Hello, who are you?\nAI: I am an AI created by Smooth AI. How can I help you today?\nHuman: "
 
 
-def respond(prompt):
+def respond(prompt, history):
     try:
         response = model.generate_content(prompt)
         return response.text
     except Exception as e:
         return f"Error: {e}"  # Handle errors
 
+demo = gr.ChatInterface(respond)
 
-def chatgpt_clone(input, history=None):
-    history = history or [
-        [prompt.split("\n")[-2], prompt.split("\n")[-1]]
-    ]  # Initial history
-    s = [item for sublist in history for item in sublist]
-    s.append(input)
-    inp = " ".join(s)
-    output = respond(inp)
-    history.append((input, output))
-    return history, history
+if __name__ == "__main__":
+    demo.launch(debug=True, inbrowser=True, share=True)
 
 
-block = gr.Blocks()
+# ""def chatgpt_clone(input, history=None):
+#     history = history or [
+#         [prompt.split("\n")[-2], prompt.split("\n")[-1]]
+#     ]  # Initial history
+#     s = [item for sublist in history for item in sublist]
+#     s.append(input)
+#     inp = " ".join(s)
+#     output = respond(inp)
+#     history.append((input, output))
+#     return history, history
 
 
-with block:
-    gr.Markdown(
-        """Dr Ijeoma
-    """
-    )
-    chatbot = gr.Chatbot()
-    message = gr.Textbox(placeholder="Ask me questions that bothers you")
-    state = gr.State()
-    submit = gr.Button("SEND")
-    submit.click(chatgpt_clone, inputs=[message, state], outputs=[chatbot, state])
+# block = gr.Blocks()
 
-block.launch(debug=True, share=True)
+
+# with block:
+#     gr.Markdown(
+#         """Dr Ijeoma
+#     """
+#     )
+#     chatbot = gr.Chatbot()
+#     message = gr.Textbox(placeholder="Ask me questions that bothers you")
+#     state = gr.State()
+#     submit = gr.Button("SEND")
+#     submit.click(chatgpt_clone, inputs=[message, state], outputs=[chatbot, state])
+
+# block.launch(debug=True, share=True)""
+
+
