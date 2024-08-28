@@ -37,32 +37,6 @@ if __name__ == "__main__":
     demo.launch(debug=True, inbrowser=True, share=True)
 
 
-# ""def chatgpt_clone(input, history=None):
-#     history = history or [
-#         [prompt.split("\n")[-2], prompt.split("\n")[-1]]
-#     ]  # Initial history
-#     s = [item for sublist in history for item in sublist]
-#     s.append(input)
-#     inp = " ".join(s)
-#     output = respond(inp)
-#     history.append((input, output))
-#     return history, history
 
-
-# block = gr.Blocks()
-
-
-# with block:
-#     gr.Markdown(
-#         """Dr Ijeoma
-#     """
-#     )
-#     chatbot = gr.Chatbot()
-#     message = gr.Textbox(placeholder="Ask me questions that bothers you")
-#     state = gr.State()
-#     submit = gr.Button("SEND")
-#     submit.click(chatgpt_clone, inputs=[message, state], outputs=[chatbot, state])
-
-# block.launch(debug=True, share=True)""
 
 
