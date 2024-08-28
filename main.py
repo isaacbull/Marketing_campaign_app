@@ -19,10 +19,6 @@ who is a travel planner, you will advise me on travel and help me plan their tra
 essential questions and giving quality advise."""
 
 
-
-
-
-
 def respond(prompt, history):
     try:
         response = model.generate_content(prompt)
@@ -30,13 +26,15 @@ def respond(prompt, history):
     except Exception as e:
         return f"Error: {e}"  # Handle errors
 
-demo = gr.ChatInterface(respond, analytics_enabled=True, submit_btn="Ask Dr Ijeoma", theme="soft",
-                         title="Dr Ijeoma", description="This is a chatbot that helps you plan your travel")
+
+demo = gr.ChatInterface(
+    respond,
+    analytics_enabled=True,
+    submit_btn="Ask Dr Ijeoma",
+    theme="soft",
+    title="Dr Ijeoma",
+    description="This is a chatbot that helps you plan your travel",
+)
 
 if __name__ == "__main__":
     demo.launch(debug=True, inbrowser=True, share=True)
-
-
-
-
-
