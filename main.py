@@ -15,8 +15,9 @@ def load_gemini_model():
 
 model = load_gemini_model()
 prompt = """You will be generating advises for whenever you are prompted like a chatbot
-who is a travel planner, you will advise users on travel and help them plan their travels
+who is a travel planner, you will advise me on travel and help me plan their travels, asking
 essential questions and giving quality advise."""
+
 
 
 
