@@ -8,7 +8,7 @@ from main import *
 def mock_os_environ(mocker):
     """Mocks the OS environment for testing."""
     mocker.patch.dict(
-        os.environ, {"GEMINI_API_KEY": "your_api_key"}
+        os.environ, {"GEMINI_API_KEY": "GEMINI_API_KEY"}
     )  # Replace with your actual API key
 
 
