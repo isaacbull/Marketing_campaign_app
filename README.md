@@ -12,5 +12,10 @@ install requirements to run app
 <>make install<>
 
 
-then run app with 
+then run app with
 <>python3 main.py<>
+
+use your live url provided to chat with the advisor
+
+example:
+- What places can I visit with #2000
