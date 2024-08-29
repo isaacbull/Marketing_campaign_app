@@ -6,16 +6,16 @@ This project would extend our marketing with gemini project and making it a refl
 
 First create a virtual env using any one of your choice in this I used venv.
 
-now create a .env file and add it to your .gitignore file 
+Now create a .env file and add it to your .gitignore file 
 
-install requirements to run app 
+Install requirements to run app 
 <>make install<>
 
 
-then run app with
+Then run app with
 <>python3 main.py<>
 
-use your live url provided to chat with the advisor
+Use your live url provided to chat with the advisor
 
-example:
+Example:
 - What places can I visit with #2000
