@@ -4,7 +4,7 @@ This project would extend our marketing with gemini project and making it a refl
 
 ### Okay we are taking it further and building a system that helps people plan travel/cooking recipe/organize todolist for a project/help write song lyrics/proof read writings and create market campaign
 
-create a virtual env using any one of your choice in this I used venv.
+First create a virtual env using any one of your choice in this I used venv.
 
 now create a .env file and add it to your .gitignore file 
 
