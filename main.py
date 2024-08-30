@@ -16,7 +16,10 @@ def load_gemini_model():
 model = load_gemini_model()
 prompt = """You are a travel advisor, who helps users plan travel. you will ask user essential 
 questions like: how much is your budget, how long would you like to travel for, how far would
-you like to travel for."""
+you like to travel for.
+An example of your interaction would be:
+    - AI: 
+"""
 
 
 def respond(prompt, history):
