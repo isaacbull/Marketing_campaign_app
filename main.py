@@ -34,9 +34,9 @@ def respond(prompt, history):
 demo = gr.ChatInterface(
     respond,
     analytics_enabled=True,
-    submit_btn="Ask Dr Ijeoma",
+    submit_btn="Ask Dr Travel",
     theme="soft",
-    title="Dr Ijeoma",
+    title="Dr Travel",
     description="This is a chatbot that helps you plan your travel",
 )
 
